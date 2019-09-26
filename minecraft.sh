@@ -56,8 +56,7 @@ level-name=My World
 level-seed=
 default-player-permission-level=member
 texturepack-required=false
-content-log-file-enabled=false
-" > /home/minecraft_d/server.properties
+content-log-file-enabled=false" > /home/minecraft_d/server.properties
   touch /home/minecraft_d/whitelist.json
   echo -e "[
 {
@@ -96,7 +95,6 @@ elif [ $choose == 7 ];
   rm -rf /home/minecraft_d
   echo  -e "${green}Uninstall MineCraft Server successfully!${none}"
 else
-  then
   echo  -e "${red}Input Error!${none}"
 fi
  
