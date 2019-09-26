@@ -91,6 +91,7 @@ elif [ $choose == 7 ];
   then
   docker stop minecraft
   docker rm minecrafte
+  docker rmi microdent/minecraft
   apt-get -y remove docker.io
   rm -rf /home/MCS
   echo  -e "${green}Uninstall MineCraft Server successfully!${none}"
