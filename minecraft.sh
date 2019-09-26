@@ -66,7 +66,7 @@ content-log-file-enabled=false" > /home/minecraft_d/server.properties
 },
 {
     \"ignoresPlayerLimit\": false,
-    \"name\": \"ClivilC\",
+    \"name\": \"ClivilC\"
 }
 ]" > /home/minecraft_d/whitelist.json
   mkdir /home/minecraft_d/worlds
