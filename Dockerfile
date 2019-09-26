@@ -2,7 +2,7 @@ FROM ubuntu
 
 MAINTAINER Microdent "dengquan@deng-quan.com"
 
-EXPOSE 19132
+EXPOSE 19132 19133
 
 RUN apt-get update
 RUN apt-get install -y wget unzip curl
