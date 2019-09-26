@@ -36,9 +36,9 @@ if [ $choose = 1 ];
   echo  -e "${green}Install Docker successfully!${none}"
 elif [ $choose == 2 ];
   then
-  rm -rf /home/MCS
-  mkdir /home/MCS
-  touch /home/MCS/server.properties
+  rm -rf /home/minecraft_d
+  mkdir /home/minecraft_d
+  touch /home/minecraft_d/server.properties
   echo -e "server-name=Dedicated Server
 gamemode=creative
 difficulty=easy
@@ -57,8 +57,8 @@ level-seed=
 default-player-permission-level=member
 texturepack-required=false
 content-log-file-enabled=false
-" > /home/MCS/server.properties
-  touch /home/MCS/whitelist.json
+" > /home/minecraft_d/server.properties
+  touch /home/minecraft_d/whitelist.json
   echo -e "[
 {
     \"ignoresPlayerLimit\": false,
@@ -68,12 +68,12 @@ content-log-file-enabled=false
     \"ignoresPlayerLimit\": false,
     \"name\": \"ClivilC\",
 }
-]" > /home/MCS/whitelist.json
-  mkdir /home/MCS/worlds
+]" > /home/minecraft_d/whitelist.json
+  mkdir /home/minecraft_d/worlds
   echo  -e "${green}Initialize the MineCraft settings successfully!${none}"
 elif [ $choose == 3 ];
   then
-  docker run -d --restart=always --name=minecraft -v /home/MCS/server.properties:/home/minecraft/server.properties -v /home/MCS/whitelist.json:/home/minecraft/whitelist.json -v /home/MCS/worlds:/home/minecraft/worlds -p 19132:19132/udp microdent/minecraft
+  docker run -d --restart=always --name=minecraft -v /home/minecraft_d/server.properties:/home/minecraft/server.properties -v /home/minecraft_d/whitelist.json:/home/minecraft/whitelist.json -v /home/minecraft_d/worlds:/home/minecraft/worlds -p 19132:19132/udp -p 19133:19133/udp microdent/minecraft
   echo  -e "${green}Download MineCraft Server and start successfully!${none}"
 elif [ $choose == 4 ];
   then
@@ -93,7 +93,7 @@ elif [ $choose == 7 ];
   docker rm minecrafte
   docker rmi microdent/minecraft
   apt-get -y remove docker.io
-  rm -rf /home/MCS
+  rm -rf /home/minecraft_d
   echo  -e "${green}Uninstall MineCraft Server successfully!${none}"
 else
   then
