@@ -4,6 +4,9 @@ MAINTAINER Microdent "dengquan@deng-quan.com"
 
 EXPOSE 19132
 
+RUN apt update
+RUN apt install wget
+RUN apt install unzip
 RUN mkdir /home/minecraft
 RUN touch error.log
 
