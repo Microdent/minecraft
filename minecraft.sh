@@ -25,7 +25,8 @@ echo -e "${green}1.Install Docker
 4.Just start Minecraft Server(Please confirm that you already have Microdent/minecraft server)
 5.Stop Minecraft Server
 6.Restart Minecrafte Server
-7.Uninstall Minecraft Server(This option will also remove Docker)${none}"
+7.Uninstall Minecraft Server(This option will also remove Docker)${none}
+${red}Attentions: If you are newer for this server, you must run 1 and run 2 and run 3!${none}"
 
 read -p "Choose your choice:(input num 1~7)：" choose
 
