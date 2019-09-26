@@ -94,6 +94,9 @@ elif [ $choose == 7 ];
   apt-get -y remove docker.io
   rm -rf /home/MCS
   echo  -e "${green}Uninstall MineCraft Server successfully!${none}"
+else
+  then
+  echo  -e "${red}Input Error!${none}"
 fi
  
  echo  -e "${green}Microd's Blog: https://blog.deng-quan.com${none}"
