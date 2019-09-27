@@ -1,7 +1,7 @@
 #!/bin/bash
 # 作者：Microd
-# 版本：1.0
-# 日期：9/26/2019
+# 版本：2.0
+# 日期：9/27/2019
 # 功能：安装Microdent的Minecraft私服
 clear
 red='\e[91m'
@@ -73,7 +73,7 @@ content-log-file-enabled=false" > /home/minecraft_d/server.properties
   echo  -e "${green}Initialize the MineCraft settings successfully!${none}"
 elif [ $choose == 3 ];
   then
-  docker run -d --restart=always --name=minecraft -v /home/minecraft_d/server.properties:/home/minecraft/server.properties -v /home/minecraft_d/whitelist.json:/home/minecraft/whitelist.json -v /home/minecraft_d/worlds:/home/minecraft/worlds -p 19132:19132/udp -p 19133:19133/udp microdent/minecraft
+  docker run -d --restart=always --name=minecraft -v /home/minecraft_d/server.properties:/home/minecraft/server.properties -v /home/minecraft_d/whitelist.json:/home/minecraft/whitelist.json -v /home/minecraft_d/worlds:/home/minecraft/worlds -v /home/minecraft_d/permissions.json:/home/minecraft/permissions.json -p 19132:19132/udp -p 19133:19133/udp microdent/minecraft
   echo  -e "${green}Download MineCraft Server and start successfully!${none}"
 elif [ $choose == 4 ];
   then
@@ -90,7 +90,7 @@ elif [ $choose == 6 ];
 elif [ $choose == 7 ];
   then
   docker stop minecraft
-  docker rm minecrafte
+  docker rm minecraft
   docker rmi microdent/minecraft
   apt-get -y remove docker.io
   rm -rf /home/minecraft_d
