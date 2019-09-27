@@ -30,7 +30,7 @@ ${red}Attentions: If you are newer for this server, you must run 1 and run 2 and
 
 read -p "Choose your choice:(input num 1~7)：" choose
 
-if [ $choose = 1 ];
+if [ $choose == 1 ];
   then
   apt-get update -y
   apt-get -y install docker.io
