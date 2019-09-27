@@ -13,9 +13,9 @@ wget https://github.com/Microdent/minecraft/raw/master/minecraft.sh && chmod +x 
 
 If you want to run this script independently, you must use:
 ```bash
-bash /YOUR PATH/minecraft.sh
+bash /YOUR_PATH/minecraft.sh
 ```
 Don't use this:
 ```bash
-sh /YOUR PATH/minecraft.sh
+sh /YOUR_PATH/minecraft.sh
 ```
