@@ -13,7 +13,7 @@ none='\e[0m'
 
 echo -e "+----------------------------------------------------------------------+"
 echo -e "|${red}Welcome to use Microd's shell script${none}                                  |"
-echo -e "|${yellow}Version: 1.0${none}                                                          |"
+echo -e "|${yellow}Version: 2.0${none}                                                          |"
 echo -e "|${magenta}Author: Microd${none}                                                        |"
 echo -e "|${cyan}Website: https://blog.deng-quan.com${none}                                   |"
 echo -e "+----------------------------------------------------------------------+"
