@@ -11,7 +11,7 @@ RUN touch error.log
 
 WORKDIR /home/minecraft
 
-RUN wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.12.1.1.zip
-RUN unzip bedrock-server-1.12.1.1.zip
+RUN wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.14.1.4.zip
+RUN unzip bedrock-server-1.14.1.4.zip
 
 ENTRYPOINT nohup sh -c 'LD_LIBRARY_PATH=. ./bedrock_server' > error.log 2>&1
